@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+
+{% load static %}
+
+{% block content %}
+    <div class="container text-justify" id="offerings">
+        <h2>Current Offerings</h2>
+        {% for item in object_list %}        
+        <div class="card" id="coffee">
+            <img src="{% static 'images/leafbean-v2.svg' %}" class="card-img-top" id="card-logo">
+            <h3 class="card-title text-center">{{ item.origin_country }} {{ item.origin_city }}</h3>
+                <div class="container-small text-center">
+                <p class="card-text" id="varietal">Varietal: {{ item.varietal }}</p>
+                <p class="card-text" id="process">Process: {{ item.process }}</p>
+                <p class="card-text" id="taste">Tasting Notes: {{ item.tasting_notes }}</p>
+                <p class="card-text" id="stock">Current Stock: {{ item.current_stock }} lbs</p>
+            <br>
+            </div>
+        </div>
+        <br>
+        {% endfor %}
+    </div>
+{% endblock %}

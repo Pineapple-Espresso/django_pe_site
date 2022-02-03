@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+    <head>
+        <title>Pineapple Espresso Cafe</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lado">
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Detroit, Coffee, Cafe, Roaster, Cannabis, Weed, Marijuana, Consumption Lounge">
+        <meta name="description" content="Michigan's Premier Cannabis Cafe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+    </head>
+    <body class="text-white">
+        <header class="container">
+            <div class='row align-items-center'>
+                <img src="{% static 'images/PELogo2-2.svg' %}"
+                alt="Pineapple Espresso Logo" 
+                id="logo">        
+            </div>
+            <div class= "row align-items-center">
+                <p class="tagline"><strong>Enter a premium curated cannabis and coffee experience.</strong></p>
+            </div>     
+        </header>
+        <br>
+     <!--ABOUT US SECTION-->
+     <div class="container text-justify" id="about">
+        <h2 id="about-pe">Who We Are</h2>
+        <div class="about">
+            <p>A flagship cannabis cafe located in Metro Detroit, we seek to create the ultimate consumption lounge experience with a specialty cafe menu at the heart.  We work closely alongside our coffee and cannabis partner businesses to provide the utlimate sensory experience in a welcoming and clean environment.</p>
+        </div>
+    </div>
+    <br>
+    <!--CURRENT OFFERINGS SECTION-->
+    {% block content %}
+    {% endblock content %}                              
+    <br> 
+    <!--MISSION SECTION-->
+    <div class="container text-justify" id="mission">
+        <h2>Our Mission</h2>
+        <div class="about"> 
+            <ul>
+                <li>Highlight the unique synergy between coffee and cannabis varieties</li>
+                <li>Provide a welcoming and secure space to gather</li>
+                <li>Never compromise quality</li>
+                <li>Explore new heights of flavor</li>
+                <li>Become a destination for the community we serve in</li>
+            </ul>
+        </div>
+    </div>
+        <br>
+        <!--ADD IN DONATION AND PAYMENT BUTTONS HERE-->
+        <!--HOW TO BUY SECTION-->
+        <div class="container">
+            <h2>How to Buy?</h2>
+            <p>If you are interested in trying some of our coffee, please reach out by email and we can hook you up.  Under the <a href='https://www.michigan.gov/mdard/0,4610,7-125-50772_45851-240577--,00.html'>Michigan Cottage Foods Law PA 113 of 2010</a>, all sales of our coffee must be made in person.  In the future, we hope to be able to provide a more convenient experience.</p>
+            <br>
+            <p>Alternatively, fill out this <a href="https://forms.gle/V2mwXS9MWBSfv4Lg7">form</a> with your contact info and order details.</p>
+        </div>
+        <!--CONTACT LINKS-->
+        <footer class="container">
+            <div class="row">
+                <div class="col" id="socials">
+                    <p><a id="instagram" href='https://www.instagram.com/pineapple_espresso_cafe/'>Instagram</a></p>
+                    <p><a id="Twitter" href='https://twitter.com/PineappleEspCaf'>Twitter</a></p>
+                </div>
+                <div class="col" id="contact">
+                    <p id="email">PineappleEspressoCo@gmail.com</p>
+                    
+                </div>
+                
+           </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+    </body>
+</html>

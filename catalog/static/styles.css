@@ -1,0 +1,20 @@
+html body {
+    background-color: black;
+    font-family: 'Source Code Pro'
+}
+#logo {
+    width:35%;
+    max-width: 300px;
+    margin:auto;
+}
+.tagline {
+    font-size: 3rem;
+    text-align: center;
+}
+#coffee {
+    align-items: center;
+    color:black;    
+}
+#card-logo {
+    max-width: 6rem;
+}
