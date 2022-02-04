@@ -21,13 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure--e!e5fi-$-ynq52qaw7xiscrzya(dnw!g_#*z5fn9b1^^u5gtb'
-
+# SECRET_KEY = 'django-insecure--e!e5fi-$-ynq52qaw7xiscrzya(dnw!g_#*z5fn9b1^^u5gtb'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY',"django-insecure--e!e5fi-$-ynq52qaw7xiscrzya(dnw!g_#*z5fn9b1^^u5gtb")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+# DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG','') != 'False'
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -49,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'webstore.urls'
@@ -124,9 +124,18 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL ='/'
+
+# Heroku: Update database configuration from $Database_
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
