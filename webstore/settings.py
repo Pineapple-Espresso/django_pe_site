@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY',"django-insecure--e!e5fi-$-ynq52
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG','') != 'False'
-ALLOWED_HOSTS = ['murmuring-meadow-99363.herokuapp.com','127.0.0.8000']
+ALLOWED_HOSTS = ['murmuring-meadow-99363.herokuapp.com','127.0.0.1']
 
 # Application definition
 
