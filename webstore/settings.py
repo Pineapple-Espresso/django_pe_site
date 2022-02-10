@@ -26,9 +26,13 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY',"django-insecure--e!e5fi-$-ynq52
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG','') != 'False'
-ALLOWED_HOSTS = ['murmuring-meadow-99363.herokuapp.com','127.0.0.8000']
-
+ALLOWED_HOSTS = ['murmuring-meadow-99363.herokuapp.com','127.0.0.1', 'pineappleespresso.cafe','www.pineappleespresso.cafe']
+INTERNAL_IPS = [
+    '127.0.0.1'
+]
 # Application definition
+
+#TAILWIND_APP_NAME = 'theme'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -38,6 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'catalog.apps.CatalogConfig',
+    #'tailwind',
+    #'theme',
+    #'django_browser_reload'
 ]
 
 MIDDLEWARE = [
@@ -48,7 +55,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware'
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    #'django_browser_reload.middleware.BrowserReloadMiddleware'
 ]
 
 ROOT_URLCONF = 'webstore.urls'
