@@ -32,7 +32,7 @@ INTERNAL_IPS = [
 ]
 # Application definition
 
-TAILWIND_APP_NAME = 'theme'
+#TAILWIND_APP_NAME = 'theme'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -42,9 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'catalog.apps.CatalogConfig',
-    'tailwind',
-    'theme',
-    'django_browser_reload'
+    #'tailwind',
+    #'theme',
+    #'django_browser_reload'
 ]
 
 MIDDLEWARE = [
