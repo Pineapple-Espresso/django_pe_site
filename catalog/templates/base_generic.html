@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+{% load tailwind_tags %}
     <head>
         <title>Pineapple Espresso Cafe</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -9,6 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {% load static %}
         <link rel="stylesheet" href="{% static 'styles.css' %}">
+        {% tailwind_css %}
     </head>
     <body class="text-white">
         <header class="container">
@@ -18,7 +20,7 @@
                 id="logo">        
             </div>
             <div class= "row align-items-center">
-                <p class="tagline"><strong>Enter a premium curated cannabis and coffee experience.</strong></p>
+                <p class="tagline"><strong>Taking Coffee to New Highs.</strong></p>
             </div>     
         </header>
         <br>
